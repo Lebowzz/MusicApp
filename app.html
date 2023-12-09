@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@200;300;400;500;600;700&family=Lexend+Exa:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles/app.css" type="text/css" />
+    <title>Spotitube</title>
+    <link
+      rel="icon"
+      href="images/images-website/logo-1.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body onload="UpdateQueue(), Message()">
+    <script>
+      function Message() {
+        alert(
+          "What you see now is a prototype. It is not the finalized project so there may still be some missing features."
+        );
+      }
+    </script>
+    <section class="top">
+      <div class="music-playlist">
+        <h3><a href="index.html">Go Back</a></h3>
+        <button>
+          <h2>Music</h2>
+        </button>
+        <button>
+          <h2>Playlists</h2>
+        </button>
+      </div>
+
+      <!-- searchbar -->
+      <div class="icon-search">
+        <form onsubmit="Search()">
+          <input
+            type="search"
+            name="search-bar"
+            id="search-bar"
+            placeholder="Search"
+            autocomplete="off"
+          />
+          <button type="submit">
+            <img src="images/images-app/search.png" alt="search-icon" />
+          </button>
+        </form>
+        <div id="search-results-box">
+          <button id="search-results-close" onclick="closeSearch()">
+            <img src="images/images-website/small-x.png" alt="x" />
+          </button>
+          <div id="search-results"></div>
+        </div>
+
+        <img src="images/images-app/profile.png" alt="profile-picture" />
+
+        <script src="scripts/search.js"></script>
+      </div>
+    </section>
+    <section class="mid">
+      <div class="row">
+        <h1>Techno & House</h1>
+        <div class="cards">
+          <div
+            class="card c1"
+            onmouseover="ShowActions(1)"
+            onmouseleave="HideActions(1)"
+          >
+            <img
+              src="images/images-app/music/rapture-pt3.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/&ME,_Black_Coffee_-_The_Rapture_Pt.III.mp3', 
+              'The Rapture pt. |||', 
+              '&Me, Black Coffee, Keinemusik',
+               'images/images-app/music/rapture-pt3.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/&ME,_Black_Coffee_-_The_Rapture_Pt.III.mp3', 
+              'The Rapture pt. |||', 
+              '&Me, Black Coffee, Keinemusik',
+               'images/images-app/music/rapture-pt3.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c2"
+            onmouseover="ShowActions(2)"
+            onmouseleave="HideActions(2)"
+          >
+            <img
+              src="images/images-app/music/7-seconds.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Joezi_feat._Coco_&_Pape_Diouf_-_7_Seconds.mp3', 
+              '7 seconds', 
+              'Joezi ft.Coco & Pape Diouf',
+               'images/images-app/music/7-seconds.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Joezi_feat._Coco_&_Pape_Diouf_-_7_Seconds.mp3', 
+              '7 seconds', 
+              'Joezi ft.Coco & Pape Diouf',
+               'images/images-app/music/7-seconds.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c3"
+            onmouseover="ShowActions(3)"
+            onmouseleave="HideActions(3)"
+          >
+            <img
+              src="images/images-app/music/nothing-around-us.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/AL018_-_Mathame_-_Nothing_Around_Us.mp3', 
+              'Nothing Around us', 
+              'Mathame',
+               'images/images-app/music/nothing-around-us.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/AL018_-_Mathame_-_Nothing_Around_Us.mp3', 
+              'Nothing Around us', 
+              'Mathame',
+               'images/images-app/music/nothing-around-us.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c4"
+            onmouseover="ShowActions(4)"
+            onmouseleave="HideActions(4)"
+          >
+            <img
+              src="images/images-app/music/more-love.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/More_Love_Rampa_ME_Remix.mp3', 
+              'More Love remix', 
+              'Rampa, &Me',
+               'images/images-app/music/more-love.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/More_Love_Rampa_ME_Remix.mp3', 
+              'More Love remix', 
+              'Rampa, &Me',
+               'images/images-app/music/more-love.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c5"
+            onmouseover="ShowActions(5)"
+            onmouseleave="HideActions(5)"
+          >
+            <img
+              src="images/images-app/music/premier-gaou.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Francis_Mercier_&_Magic_System_-_Premier_Gaou_Nitefreak_Extended_Remix.mp3', 
+              'Premier Gaou Remix', 
+              'Francis Mercier, Magic System, Nitefreak',
+              'images/images-app/music/premier-gaou.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Francis_Mercier_&_Magic_System_-_Premier_Gaou_Nitefreak_Extended_Remix.mp3', 
+              'Premier Gaou Remix', 
+              'Francis Mercier, Magic System, Nitefreak',
+              'images/images-app/music/premier-gaou.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c6"
+            onmouseover="ShowActions(6)"
+            onmouseleave="HideActions(6)"
+          >
+            <img
+              src="images/images-app/music/glue.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Bicep_-_Glue.mp3', 
+              'Glue', 
+              'Bicep',
+              'images/images-app/music/glue.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Bicep_-_Glue.mp3', 
+              'Glue', 
+              'Bicep',
+              'images/images-app/music/glue.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h1>Ambient</h1>
+        <div class="cards">
+          <div
+            class="card c7"
+            onmouseover="ShowActions(7)"
+            onmouseleave="HideActions(7)"
+          >
+            <img
+              src="images/images-app/music/aglow.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Karamel_Kel_-_aglow.mp3', 
+              'Aglow', 
+              'Karamel Kel',
+              'images/images-app/music/aglow.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Karamel_Kel_-_aglow.mp3', 
+              'Aglow', 
+              'Karamel Kel',
+              'images/images-app/music/aglow.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c8"
+            onmouseover="ShowActions(8)"
+            onmouseleave="HideActions(8)"
+          >
+            <img
+              src="images/images-app/music/black-out-days.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Phantogram_-_Black_Out_Days_Future_Islands_Remix.mp3', 
+              'Black Out Days remix', 
+              'Future Islands',
+              'images/images-app/music/black-out-days.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Phantogram_-_Black_Out_Days_Future_Islands_Remix.mp3', 
+              'Black Out Days remix', 
+              'Future Islands',
+              'images/images-app/music/black-out-days.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c9"
+            onmouseover="ShowActions(9)"
+            onmouseleave="HideActions(9)"
+          >
+            <img
+              src="images/images-app/music/runaway.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/AURORA_-_Runaway.mp3', 
+              'Runaway', 
+              'Aurora',
+              'images/images-app/music/runaway.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/AURORA_-_Runaway.mp3', 
+              'Runaway', 
+              'Aurora',
+              'images/images-app/music/runaway.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c10"
+            onmouseover="ShowActions(10)"
+            onmouseleave="HideActions(10)"
+          >
+            <img
+              src="images/images-app/music/swing-lynn.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Swing_Lynn.mp3', 
+              'Swing Lynn', 
+              'Utopia Boys',
+              'images/images-app/music/swing-lynn.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Swing_Lynn.mp3', 
+              'Swing Lynn', 
+              'Utopia Boys',
+              'images/images-app/music/swing-lynn.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c11"
+            onmouseover="ShowActions(11)"
+            onmouseleave="HideActions(11)"
+          >
+            <img
+              src="images/images-app/music/snowfall.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/Oneheart_x_reidenshi_-_snowfall.mp3', 
+              'Snowfall', 
+              'Oneheart, reidenshi',
+              'images/images-app/music/snowfall.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/Oneheart_x_reidenshi_-_snowfall.mp3', 
+              'Snowfall', 
+              'Oneheart, reidenshi',
+              'images/images-app/music/snowfall.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+          <div
+            class="card c12"
+            onmouseover="ShowActions(12)"
+            onmouseleave="HideActions(12)"
+          >
+            <img
+              src="images/images-app/music/green-to-blue.jpg"
+              alt="music-cover-image"
+            />
+            <button
+              onclick="Music('audios/daniel.mp3_-_green_to_blue.mp3', 
+              'Green to Blue', 
+              'daniel.mp3',
+              'images/images-app/music/green-to-blue.jpg')"
+            >
+              <img
+                src="images/images-website/logo-1.png"
+                title="play"
+                alt="play-icon"
+              />
+            </button>
+            <button
+              onclick="nextMusic('audios/daniel.mp3_-_green_to_blue.mp3', 
+              'Green to Blue', 
+              'daniel.mp3',
+              'images/images-app/music/green-to-blue.jpg')"
+            >
+              <img
+                src="images/images-app/plus.png"
+                title="add to queue"
+                alt="plus-icon"
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bottom">
+      <div class="playing">
+        <img
+          id="playing-img"
+          src="images/images-app/music/rapture-pt3.jpg"
+          alt="currently playing cover image"
+        />
+        <div class="names">
+          <p id="playing-song-name">The Rapture pt. |||</p>
+          <p id="playing-song-artist">&Me, Black Coffee, Keinemusik</p>
+        </div>
+        <img
+          id="soundwave"
+          src="images/images-app/soundwave.png"
+          alt="music icon"
+        />
+      </div>
+      <div class="audio-set">
+        <input type="range" id="timeBar" value="0" min="0" step="1" />
+        <div class="play">
+          <!-- PREVIOUS -->
+          <button onclick="previousSong()" title="previous">
+            <img
+              src="images/images-app/previous-icon.png"
+              alt="previous icon"
+            />
+          </button>
+          <!-- AUDIO -->
+          <audio
+            id="audio"
+            src="audios/&ME,_Black_Coffee_-_The_Rapture_Pt.III.mp3"
+          ></audio>
+          <!-- PLAY -->
+          <button id="play-pause" title="play">
+            <div class="play-pause-bkgrnd">
+              <img
+                id="play-pause-icon"
+                src="images/images-app/play.png"
+                alt="play/pause"
+              />
+            </div>
+          </button>
+          <!-- NEXT -->
+          <button onclick="nextSong()" title="next">
+            <img src="images/images-app/next-icon.png" alt="next icon" />
+          </button>
+        </div>
+      </div>
+      <!-- QUEUE -->
+      <div class="queue">
+        <button title="queue" onclick="ShowQueue()">
+          <img src="images/images-app/queue-icon.png" alt="queue icon" />
+        </button>
+        <div id="next" class="playing">
+          <img
+            id="next-image"
+            src="images/images-app/music/rapture-pt3.jpg"
+            alt="next playing cover image"
+          />
+          <div class="next-names names">
+            <p id="next-song-name">The Rapture pt. |||</p>
+            <p id="next-artist-name">&Me, Black Coffee, Keinemusik</p>
+          </div>
+        </div>
+        <div class="show-queue">
+          <h3>Next:</h3>
+          <div id="queue-showcase"></div>
+        </div>
+      </div>
+
+      <script src="scripts/play.js"></script>
+    </section>
+  </body>
+</html>

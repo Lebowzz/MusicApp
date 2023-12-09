@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="styles/style.css" type="text/css" />
+    <title>Spotitube</title>
+    <link
+      rel="icon"
+      href="images/images-website/logo-1.png"
+      type="image/x-icon"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <img src="images/images-website/logo-1.png" alt="spotitube logo" />
+        <p>Spotitube</p>
+      </div>
+      <div class="navigation">
+        <p><a href="#home">Home</a></p>
+        <p><a href="#product">Product</a></p>
+        <p><a href="#plans-and-prices">Plans & Pricing</a></p>
+        <p><a href="#about-us">About us</a></p>
+        <p><a href="#contact-us">Contact us</a></p>
+      </div>
+      <button class="try-out-1"><a href="app.html">Try it out</a></button>
+    </header>
+
+    <!-- HOME -->
+    <article id="home">
+      <!-- next and previous buttons -->
+      <button onclick="Previous()" id="previous-tab">
+        <img src="images/images-website/previous-btn-home.png" />
+      </button>
+      <button onclick="Next()" id="next-tab">
+        <img src="images/images-website/next-btn-home.png" />
+      </button>
+      <!-- small circles -->
+      <div class="tab-nav">
+        <button onclick="GoToTab(0)">
+          <img src="images/images-website/home-pic-nav-circle.png" />
+        </button>
+        <button onclick="GoToTab(1)">
+          <img src="images/images-website/home-pic-nav-circle.png" />
+        </button>
+        <button onclick="GoToTab(2)">
+          <img src="images/images-website/home-pic-nav-circle.png" />
+        </button>
+      </div>
+      <!-- tabs -->
+      <div class="tabs">
+        <div class="tab1 tab">
+          <h1>Listen to all your YouTube music ad free</h1>
+          <button><a href="app.html">Try it out</a></button>
+          <div class="tab-1-images">
+            <img src="images/images-website/app-ui-1.png" alt="ui-image-1" />
+            <img src="images/images-website/app-ui-1.png" alt="ui-image-2" />
+          </div>
+          <div class="tab-2-images">
+            <img
+              src="images/images-website/music-note.png"
+              alt="music-note-1"
+            />
+            <img
+              src="images/images-website/music-note-2.png"
+              alt="music-note-2"
+            />
+          </div>
+          <img
+            class="tab-3-image"
+            src="images/images-website/logo-bkgrnd.png"
+            alt="spotitube logo"
+          />
+        </div>
+      </div>
+      <!-- tabs navigation -->
+      <script src="scripts/tab-nav.js"></script>
+    </article>
+
+    <!-- PRODUCT -->
+    <article id="product">
+      <!-- forget the ads for animation -->
+      <div class="forget">
+        <h2>Forget the ads</h2>
+        <h2>Forget the ads</h2>
+        <h2>Forget the ads</h2>
+        <img
+          class="down-arrow"
+          src="images/images-website/double-down.png"
+          alt="down-arrow"
+        />
+      </div>
+      <!-- forget animation -->
+      <script src="scripts/forget-the-ads.js"></script>
+      <!-- intro -->
+      <div class="product-intro">
+        <h2>
+          <span>Listen to your most-loved music on YouTube</span>
+          <span>without the never ending ads!</span>
+        </h2>
+      </div>
+      <!-- About spotitube -->
+      <div class="product-description">
+        <p>
+          <span>Spotitube</span>
+          <span>is your solution to listening to these songs that you can</span>
+          <span
+            >only find on youtube without the annoying ads and a nice UI.</span
+          >
+        </p>
+        <img
+          class="ad-img"
+          src="images/images-website/ad-image.png"
+          alt="image of an ad"
+        />
+      </div>
+      <img
+        class="x"
+        src="images/images-website/purple-x.png"
+        alt="image of an x"
+      />
+      <script src="scripts/x.js"></script>
+    </article>
+
+    <!-- PLANS AND PRICES -->
+    <article id="plans-and-prices">
+      <h2 class="article-title">
+        <span>Prices</span>
+        <span>&</span>
+        <span>Plans</span>
+      </h2>
+      <div class="plans">
+        <!-- card 1 -->
+        <div class="card">
+          <div class="card-top">
+            <h3>Free Plan</h3>
+            <hr width="100%" />
+            <div class="accesses">
+              <p>Play music</p>
+              <img
+                src="images/images-website/small-check.png"
+                alt="small check"
+              />
+            </div>
+            <div class="accesses">
+              <p>Make Playlists</p>
+              <img
+                id="small-x"
+                src="images/images-website/small-x.png"
+                alt="small check"
+              />
+            </div>
+          </div>
+          <p class="prices">Free</p>
+        </div>
+        <!-- card 2 -->
+        <div class="card">
+          <div class="card-top">
+            <h3>Student Plan</h3>
+            <hr width="100%" />
+            <div class="accesses">
+              <p>Play music</p>
+              <img
+                src="images/images-website/small-check.png"
+                alt="small check"
+              />
+            </div>
+            <div class="accesses">
+              <p>Make Playlists</p>
+              <img
+                src="images/images-website/small-check.png"
+                alt="small check"
+              />
+            </div>
+          </div>
+          <p class="prices">$0.99</p>
+        </div>
+        <!-- card 3 -->
+        <div class="card">
+          <div class="card-top">
+            <h3>Premium Plan</h3>
+            <hr width="100%" />
+            <div class="accesses">
+              <p>Play music</p>
+              <img
+                src="images/images-website/small-check.png"
+                alt="small check"
+              />
+            </div>
+            <div class="accesses">
+              <p>Make Playlists</p>
+              <img
+                src="images/images-website/small-check.png"
+                alt="small check"
+              />
+            </div>
+          </div>
+          <p class="prices">$2.99</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- ABOUT US -->
+    <article id="about-us">
+      <h2 class="article-title">
+        <span>Who we</span>
+        <span>are</span>
+      </h2>
+      <section>
+        <p>
+          <span>Based in Lebanon</span
+          ><span
+            >, our team blends tech innovation with a love for music, shaping
+            Spotitube to </span
+          ><span>redefine how we experience tunes. </span
+          ><span>Join us as we bridge cultures and borders through </span
+          ><span>the universal language of music.</span>
+        </p>
+        <img
+          class="big-logo"
+          src="images/images-website/logo-big.png"
+          alt="big spotitube logo"
+        />
+      </section>
+      <!-- logo rotation -->
+      <script src="scripts/logo-rotation.js"></script>
+    </article>
+
+    <!-- CONTACT US -->
+    <article id="contact-us">
+      <section class="contact-us-left">
+        <div>
+          <h3>Got Questions?</h3>
+          <h2>Contact Us</h2>
+        </div>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14312.775920376373!2d35.564311622127676!3d33.86494057372941!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151f17d673bf9603%3A0xbd5ec4c09ab0feed!2sEcole%20sup%C3%A9rieure%20d&#39;ing%C3%A9nieurs%20de%20Beyrouth%20(ESIB)!5e0!3m2!1sen!2slb!4v1701858269101!5m2!1sen!2slb"
+            width="300"
+            height="300"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <p>Mar Roukos, Dekwaneh, Lebanon</p>
+        </div>
+      </section>
+      <fieldset class="contact-us-right">
+        <form id="form">
+          <input
+            type="text"
+            id="form-full-name"
+            name="full-name"
+            placeholder="full name"
+          />
+          <input
+            type="email"
+            id="form-email"
+            name="email"
+            placeholder="email"
+          />
+          <textarea
+            name="text"
+            id="form-text"
+            cols="30"
+            rows="10"
+            placeholder="Enter your message here..."
+          ></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </fieldset>
+
+      <script src="scripts/contact.js"></script>
+    </article>
+
+    <hr style="border: 1px solid #303030" />
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-nav">
+        <p><a href="#home">Home</a></p>
+        <p><a href="#product">Product</a></p>
+        <p><a href="#plans-and-prices">Plans & Pricing</a></p>
+        <p><a href="#about-us">About us</a></p>
+        <p><a href="#contact-us">Contact us</a></p>
+      </div>
+      <div class="footer-right">
+        <button><a href="app.html">Try it out</a></button>
+        <div class="logo">
+          <img src="images/images-website/logo-1.png" alt="spotitube logo" />
+          <p>Spotitube</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
